@@ -37,7 +37,7 @@ if (!options.config) {
 if (commands.length === 0 && (options.h || options.help)) {
   console.log([
     '',
-    '  Usage: reactNativeSplit [command] [options]',
+    '  Usage: react-native-zhuanzhuansplit [command] [options]',
     '',
     '',
     '  Commands:',
@@ -52,7 +52,7 @@ if (commands.length === 0 && (options.h || options.help)) {
 }
 if (commands.length === 0) {
   console.error(
-    'You did not pass any commands, run `reactNativeSplit --help` to see a list of all available commands.'
+    'You did not pass any commands, run `react-native-zhuanzhuansplit --help` to see a list of all available commands.'
   );
   process.exit(1);
 }
