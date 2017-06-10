@@ -1,5 +1,5 @@
 {
-  "name": "react-native-zhuanzhuansplit",
+  "name": "reactNativeSplit",
   "version": "1.0.0",
   "description": "React native bundle split tool.",
   "main": "index.js",

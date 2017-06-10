@@ -1,0 +1,112 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/Users/lifeifei/.nvm/versions/node/v6.1.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.8.6
+3 info using node@v4.4.4
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/lifeifei/Documents/react-native/reactNativeSplit',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/lifeifei/.npm/reactNativeSplit/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/lifeifei/.npm correctMkdir not in flight; initializing
+10 info lifecycle reactNativeSplit@1.0.0~prepublish: reactNativeSplit@1.0.0
+11 silly lifecycle reactNativeSplit@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/lifeifei/.npm/reactNativeSplit/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/lifeifei/Documents/react-native/reactNativeSplit' ]
+13 verbose tarball /Users/lifeifei/.npm/reactNativeSplit/1.0.0/package.tgz
+14 verbose folder /Users/lifeifei/Documents/react-native/reactNativeSplit
+15 verbose addLocalTarball adding from inside cache /Users/lifeifei/.npm/reactNativeSplit/1.0.0/package.tgz
+16 verbose correctMkdir /Users/lifeifei/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd reactNativeSplit@1.0.0
+18 verbose afterAdd /Users/lifeifei/.npm/reactNativeSplit/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/lifeifei/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/lifeifei/.npm/reactNativeSplit/1.0.0/package/package.json written
+21 silly publish { name: 'reactNativeSplit',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'React native bundle split tool.',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { lint: 'flow', test: 'jest' },
+21 silly publish   author: { name: 'Desmond Yao' },
+21 silly publish   license: 'ISC',
+21 silly publish   jest: { setupFiles: [ './jest/setup.js' ] },
+21 silly publish   dependencies:
+21 silly publish    { 'babel-register': '^6.24.1',
+21 silly publish      'babel-traverse': '^6.24.1',
+21 silly publish      babylon: '^6.16.1',
+21 silly publish      minimist: '^1.2.0',
+21 silly publish      minimatch: '^3.0.3',
+21 silly publish      'uglify-js': '^2.8.22' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-jest': '^19.0.0',
+21 silly publish      'babel-plugin-transform-flow-strip-types': '^6.22.0',
+21 silly publish      'babel-preset-es2015-node': '^6.1.1',
+21 silly publish      eslint: '^3.19.0',
+21 silly publish      'flow-bin': '^0.43.1',
+21 silly publish      jest: '^19.0.2',
+21 silly publish      'regenerator-runtime': '^0.10.3' },
+21 silly publish   readme: '# React Native Bundle Splitter\n\nSplit config: [splitconfig](./split-example/.splitconfig).\n\n## Why just an EXAMPLE (not a complete library)\n\nRN Bundle split is not just "split", it should also take two point into consideration:\n\n- **How to use them**, means native code framework change, because RN native part not support loading script in demand.\n- **Project structure**, you should have a clean project dependency graph (recursive dependency is bad).\n\nSo, I don\'t want to make it to a library which be common to use.\n\nIn this example, it have clear project structure and some hack to RN framework (by reflection in Java). All split-bundle related code is in **src** directory, use them with pleasure:)\n\n## Project Structure\n\n```\n/root\n |- /src\n   |- /components\n     |- /packagea\n       |- SampleA.js      => Entry1\n       |- ApiOfSampleA.js => Refered in SampleA.js\n     |- /packageb\n       |- SampleB         => Entry2\n       |- ApiOfSampleA.js => Refered in SampleA.js\n   |- /modules\n     |- index.js      => Append to base\n     |- ModuleA.js    => Refered in index.js\n     |- ModuleB.js    => Refered in index.js\n |- base.js          => Entry of base\n |- resolveInject.js => Resolve splitted resource\n```\n\n## Usage\n\n```\nnpm install\nnode ../index.js --platform android --output build --config .splitconfig --dev false\n```\nSee example [run-example.sh](./split-example/run-example.sh).\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'bdef77cdfe1c840647146de45dd952af7b29d4d6',
+21 silly publish   _id: 'reactNativeSplit@1.0.0',
+21 silly publish   _shasum: 'fa8f3f9092b3e83f52c988315de8d1512d337388',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name reactNativeSplit
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://localhost:4873/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'reactNativeSplit',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'reactNativeSplit',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri http://localhost:4873/reactNativeSplit
+28 verbose publish registryBase http://localhost:4873/
+29 silly publish uploading /Users/lifeifei/.npm/reactNativeSplit/1.0.0/package.tgz
+30 verbose request uri http://localhost:4873/reactNativeSplit
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 4:06:37 PM
+33 verbose request using bearer token for auth
+34 verbose request id b11481096f02b626
+35 http request PUT http://localhost:4873/reactNativeSplit
+36 http 403 http://localhost:4873/reactNativeSplit
+37 verbose headers { 'x-powered-by': 'Sinopia/1.4.0',
+37 verbose headers   'content-type': 'application/json; charset=utf-8',
+37 verbose headers   'content-length': '84',
+37 verbose headers   vary: 'Accept-Encoding',
+37 verbose headers   'x-status-cat': 'http://flic.kr/p/aV6jFK',
+37 verbose headers   date: 'Sat, 10 Jun 2017 08:06:46 GMT',
+37 verbose headers   connection: 'keep-alive' }
+38 verbose request invalidating /Users/lifeifei/.npm/localhost_4873/reactNativeSplit on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: user lishoulong is not allowed to publish package reactNativeSplit : reactNativeSplit
+40 verbose stack     at makeError (/Users/lifeifei/.nvm/versions/node/v6.1.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/lifeifei/.nvm/versions/node/v6.1.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/Users/lifeifei/.nvm/versions/node/v6.1.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/Users/lifeifei/.nvm/versions/node/v6.1.0/lib/node_modules/npm/node_modules/request/request.js:199:22)
+40 verbose stack     at emitTwo (events.js:87:13)
+40 verbose stack     at Request.emit (events.js:172:7)
+40 verbose stack     at Request.<anonymous> (/Users/lifeifei/.nvm/versions/node/v6.1.0/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+40 verbose stack     at emitOne (events.js:82:20)
+40 verbose stack     at Request.emit (events.js:169:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/lifeifei/.nvm/versions/node/v6.1.0/lib/node_modules/npm/node_modules/request/request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid reactNativeSplit
+43 verbose cwd /Users/lifeifei/Documents/react-native/reactNativeSplit
+44 error Darwin 16.6.0
+45 error argv "/usr/local/bin/node" "/Users/lifeifei/.nvm/versions/node/v6.1.0/bin/npm" "publish"
+46 error node v4.4.4
+47 error npm  v3.8.6
+48 error code E403
+49 error user lishoulong is not allowed to publish package reactNativeSplit : reactNativeSplit
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
