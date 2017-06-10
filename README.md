@@ -1,0 +1,2 @@
+# reactNativeSplit
+拆包react-native为base部分和business部分
